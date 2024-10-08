@@ -1,0 +1,20 @@
+.button {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: $bg-basic-green;
+  color: $light;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $bg-basic-middle;
+}
+
+.button:active {
+  color: rgb(255, 255, 255, 0.6);
+}
