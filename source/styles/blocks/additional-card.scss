@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 325px 320px 250px;
+    grid-template-columns: 327px 323px 250px;
     align-items: center;
     padding: 0;
   }
@@ -20,7 +20,7 @@
     text-transform: uppercase;
     width: 180px;
     padding-top: 13px;
-    margin: 0 0 13px;
+    margin: 0 0 12px;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -32,6 +32,7 @@
 
     @media (min-width: $desktop-width) {
       grid-column: 1 / 2;
+      padding: 25px 30px 27px 0;
     }
   }
 
@@ -61,12 +62,13 @@
     width: 200px;
 
     @media (min-width: $tablet-width) {
-      width: 150px;
-      padding: 5px;
+      width: 136px;
+      text-align: right;
     }
 
     @media (min-width: $desktop-width) {
       width: 170px;
+      text-align: left;
     }
   }
 
@@ -75,8 +77,12 @@
     margin-left: 0;
     text-align: end;
 
+    @media (min-width: $tablet-width) {
+      width: 91px;
+    }
+
     @media (min-width: $desktop-width) {
-      width: 112px;
+      width: 110px;
     }
   }
 

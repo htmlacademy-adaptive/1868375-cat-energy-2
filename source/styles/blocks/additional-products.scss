@@ -3,11 +3,11 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding-top: 74px;
+    padding-top: 70px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 71px;
+    padding-top: 69px;
   }
 
   &__wrapper {
@@ -45,6 +45,10 @@
     }
 
     @media (min-width: $desktop-width) {
+      width: 387px;
+      font-size: 40px;
+      line-height: 40px;
+      margin: 0 0 78px;
       padding-left: 0;
       box-shadow: -50px 0 0 0 $light, 29px 0 0 0 $light;
     }
@@ -62,11 +66,11 @@
     z-index: -1;
 
     @media (min-width: $tablet-width) {
-      top: 87px;
+      top: 84px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 82px;
+      top: 87px;
     }
   }
 
@@ -81,20 +85,20 @@
   }
 
   &__list {
-    padding: 0;
     list-style-type: none;
     width: 280px;
     margin: 0;
-    padding-bottom: 35px;
+    padding: 0 0 31px;
 
     @media (min-width: $tablet-width) {
       width: 708px;
+      padding: 0 0 70px;
     }
 
     @media (min-width: $desktop-width) {
       width: 900px;
       padding-bottom: 0;
-      margin-right: 80px;
+      margin-right: 78px;
     }
   }
 
@@ -109,10 +113,6 @@
   &__promo {
     width: 280px;
     min-height: 290px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end; */
     background:
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 700px, transparent 180px),
       image-set(
@@ -123,7 +123,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    /* margin: 35px auto 0; */
 
     @media (min-width: $tablet-width) {
       width: 707px;
@@ -171,13 +170,13 @@
       height: 82px;
       top: 50%;
       transform: translateY(-50%);
-      left: 85px;
+      left: 79px;
     }
 
     @media (min-width: $desktop-width) {
       width: 80px;
       height: 82px;
-      top: 92px;
+      top: 98px;
     }
   }
 
@@ -189,7 +188,7 @@
     width: 161px;
     margin: 0 auto;
     text-align: center;
-    padding: 186px 0 20px;
+    padding: 188px 0 20px;
 
     @media (min-width: $tablet-width) {
       padding: 71px 0 20px;

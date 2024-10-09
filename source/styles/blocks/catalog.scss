@@ -2,11 +2,11 @@
   padding-top: 27px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 90px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 74px;
+    padding-top: 128px;
   }
 
   &__wrapper {
@@ -37,6 +37,7 @@
       line-height: 60px;
       width: 600px;
       margin: 0 0 84px;
+      padding: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -70,24 +71,6 @@
     @media (min-width: $tablet-width) {
       padding: 0 37px 40px;
       border-top: none;
-    }
-  }
-
-  &__item:last-child {
-    text-align: center;
-    padding: 0 20px 25px;
-    border-bottom: 1px solid $border-grey;
-
-    @media (min-width: $tablet-width) {
-      border: 1px solid $border-grey;
-      padding: 0 37px 40px;
-      margin-top: 24%;
-    }
-
-    @media (min-width: $desktop-width) {
-      border: 1px solid $border-grey;
-      padding: 0 37px 40px;
-      margin-top: 32%;
     }
   }
 }
