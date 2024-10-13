@@ -10,69 +10,85 @@
     border-bottom: none;
     padding: 75px 0 69px;
   }
+}
 
-  &__wrapper {
-    width: 280px;
+.features__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}
+
+.features__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $dark;
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+  }
+}
+
+.features__list {
+  list-style-type: none;
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 247px 249px;
+    gap: 37px 137px;
+    counter-reset: features__list; /* устанавливает значение счетчика advantages__list на 0. */
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    grid-template-columns: repeat(4, 250px);
+    gap: 74px;
     margin: 0 auto;
+  }
+}
 
+.features__item {
+  min-height: 60px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  &::after {
     @media (min-width: $tablet-width) {
-      width: 708px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 1220px;
+      counter-increment: features__list; /* увеличивает значение счетчика features__list на 1. */
+      content: counter(features__list); /* выводит значение счетчика features__list. */
+      position: absolute;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-button-special;
+      z-index: -4;
+      top: 0;
+      right: 20px;
     }
   }
 
-  &__title {
-    font-family: $secondary-font;
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
-    color: $dark;
-    margin: 0 0 40px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 60px;
-      line-height: 60px;
-      margin-bottom: 32px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 500px;
-    }
-  }
-
-  &__list {
-    list-style-type: none;
-    display: grid;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-
-    @media (min-width: $tablet-width) {
-      grid-template-columns: 247px 249px;
-      gap: 37px 137px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 1220px;
-      grid-template-columns: repeat(4, 250px);
-      gap: 74px;
-      margin: 0 auto;
-    }
-  }
-
-  &__item {
-    min-height: 60px;
-    position: relative;
-
-    @media (min-width: $tablet-width) {
-      padding-left: 0;
-    }
-  }
-
-  &__item--leaf::before {
+  &--leaf::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -92,21 +108,7 @@
     }
   }
 
-  &__item--leaf::after {
-    @media (min-width: $tablet-width) {
-      content: "1";
-      position: absolute;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-button-special;
-      z-index: -4;
-      top: 0;
-      right: 20px;
-    }
-  }
-
-  &__item--water::before {
+  &--water::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -126,21 +128,7 @@
     }
   }
 
-  &__item--water::after {
-    @media (min-width: $tablet-width) {
-      content: "2";
-      position: absolute;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-button-special;
-      z-index: -4;
-      top: 0;
-      right: 4px;
-    }
-  }
-
-  &__item--eat::before {
+  &--eat::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -160,21 +148,7 @@
     }
   }
 
-  &__item--eat::after {
-    @media (min-width: $tablet-width) {
-      content: "3";
-      position: absolute;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-button-special;
-      z-index: -4;
-      top: 0;
-      right: 4px;
-    }
-  }
-
-  &__item--clock::before {
+  &--clock::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -193,31 +167,17 @@
       top: 40px;
     }
   }
+}
 
-  &__item--clock::after {
-    @media (min-width: $tablet-width) {
-      content: "4";
-      position: absolute;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-button-special;
-      z-index: -4;
-      top: 0;
-      right: -2px;
-    }
-  }
+.features__text {
+  margin: 0;
+  padding: 1px 5px 5px 80px;
 
-  &__text {
-    margin: 0;
-    padding: 1px 5px 5px 80px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 24px;
-      padding: 151px 2px 57px 0;
-      text-align: left;
-      z-index: 5;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 151px 2px 57px 0;
+    text-align: left;
+    z-index: 5;
   }
 }
